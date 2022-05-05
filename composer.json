@@ -1,0 +1,16 @@
+{
+  "name": "plindsay/328/pets2",
+  "authors": [
+    {
+      "name": "Chisom Ehirim",
+      "email": "ehirim87@gmail.com"
+    },
+    {
+      "name": "Patrick Lindsay",
+      "email": "lindsaypj88@gmail.com"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
