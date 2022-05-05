@@ -12,9 +12,16 @@
 
     //Define a default route
     $f3->route('GET /', function(){
-        echo "My Pets";
+        //echo "My Pets";
+      $view = new Template();
+        echo $view->render('views/pet-home.html');
+    });
+
+    $f3->route('GET /order', function(){
+
+        echo "Order Page";
 //        $view = new Template();
-//        echo $view->render('views/home.php');
+//        echo $view->render('views/order.html');
     });
 
     //Run fat free
