@@ -29,7 +29,7 @@ $f3->route('POST /order2', function(){
     $_SESSION['color'] = $_POST['color'];
 
     $view = new Template();
-    echo $view->render('views/order2.html');
+    echo $view->render('views/pet-order2.html');
 });
 
 $f3->route('POST /summary', function(){
