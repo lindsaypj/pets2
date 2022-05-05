@@ -22,10 +22,23 @@
         echo $view->render('views/pet-order.html');
     });
 
-$f3->route('GET /order2', function(){
+$f3->route('POST /order2', function(){
+
+    // Store data in session
+    $_SESSION['animal'] = $_POST['animal'];
+    $_SESSION['color'] = $_POST['color'];
+
+    $view = new Template();
+    echo $view->render('views/order2.html');
+});
+
+$f3->route('POST /summary', function(){
+
+    // Store data in session
+    $_SESSION['petName'] = $_POST['petName'];
+
     $view = new Template();
     echo $view->render('views/summary.html');
 });
-
     //Run fat free
     $f3->run();
