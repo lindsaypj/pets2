@@ -18,11 +18,14 @@
     });
 
     $f3->route('GET /order', function(){
-
-        echo "Order Page";
-//        $view = new Template();
-//        echo $view->render('views/order.html');
+        $view = new Template();
+        echo $view->render('views/pet-order.html');
     });
+
+$f3->route('GET /order2', function(){
+    $view = new Template();
+    echo $view->render('views/summary.html');
+});
 
     //Run fat free
     $f3->run();
