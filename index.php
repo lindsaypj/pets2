@@ -40,10 +40,20 @@ $f3->route('POST /order2', function(){
 $f3->route('POST /summary', function(){
 
     // Store data in session
-    $_SESSION['petName'] = $_POST['petName'];
+    $_SESSION['petAge'] = $_POST['petAge'];
 
     $view = new Template();
     echo $view->render('views/order-summary.html');
+});
+
+$f3->route('POST /order3', function(){
+
+    // Store data in session
+   $_SESSION['petName'] = $_POST['petName'];
+//    $_SESSION['color'] = $_POST['color'];
+
+    $view = new Template();
+    echo $view->render('views/pet-order3.html');
 });
     //Run fat free
     $f3->run();
