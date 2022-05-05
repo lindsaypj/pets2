@@ -4,6 +4,9 @@
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
 
+    // Start Session
+    session_start();
+
     //Require the autoload file
     require_once('vendor/autoload.php');
 
@@ -18,6 +21,8 @@
     });
 
     $f3->route('GET /order', function(){
+
+
         $view = new Template();
         echo $view->render('views/pet-order.html');
     });
@@ -38,7 +43,7 @@ $f3->route('POST /summary', function(){
     $_SESSION['petName'] = $_POST['petName'];
 
     $view = new Template();
-    echo $view->render('views/summary.html');
+    echo $view->render('views/order-summary.html');
 });
     //Run fat free
     $f3->run();
